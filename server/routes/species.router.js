@@ -4,7 +4,9 @@ const SpeciesModel = require("../db/species.model");
 const speciesRouter = new Router();
 
 speciesRouter.get("/", async (req, res) => {
-	const species = await SpeciesModel.find().sort({ created: "asc" });
+	const species = await SpeciesModel.find()
+		.limit(100)
+		.sort({ created: "asc" });
 	return res.json(species);
 });
 

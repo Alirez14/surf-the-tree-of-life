@@ -22,9 +22,9 @@ const populateSpecies = async () => {
 		parentBySpecies[nodeLink.target] = parseInt(nodeLink.source);
 	});
 	const confidenceById = {
-		0: "confident",
-		1: "incertae sedis in putative position",
-		2: "incertae sedis position unspecified",
+		'0': "confident",
+		'1': "incertae sedis in putative position",
+		'2': "incertae sedis position unspecified",
 	};
 	const species = treeOfLifeGraph.nodes.map((node) => ({
 		name: node.name,
