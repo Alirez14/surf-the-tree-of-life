@@ -11,7 +11,7 @@ const PageHome = () => {
 	const [species, setSpecies] = useState();
 	useEffect(() => {
 		fetchSpecies(setSpecies);
-	}, [species]);
+	}, []);
 	return (
 		<div>
 			<h1>Welcome to Tree Of Life Project</h1>
