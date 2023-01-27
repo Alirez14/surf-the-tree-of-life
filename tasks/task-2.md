@@ -1,5 +1,0 @@
-- page that contain a form with 4 inputs [name,species,date,description] 
-- species input should be a dropdown with all the species from the DB sorted alphabetically
-- after filling and submitting, data is going to be save as a document in new collection in DB
-- create new page that shows all the logged data from the form as a list
-- each row should have a button that delete the document from the DB 
