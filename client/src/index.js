@@ -3,15 +3,19 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import PageHome from "./Pages/page-home";
+import PageTree from "./Pages/page-tree";
 import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <PageHome></PageHome>,
-
 		children: [],
 	},
+	{
+		path: "tree",
+		element: <PageTree></PageTree>
+	}
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
