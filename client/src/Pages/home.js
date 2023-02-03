@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ComListSpecies from "../Components/com-list-species";
+import ListSpecies from "../Components/list-species";
 
 const fetchSpecies = (dataSetter) => {
 	return fetch("http://localhost:8080/api/species/", {}).then((res) =>
@@ -7,7 +7,7 @@ const fetchSpecies = (dataSetter) => {
 	);
 };
 
-const PageHome = () => {
+const Home = () => {
 	const [species, setSpecies] = useState();
 	useEffect(() => {
 		fetchSpecies(setSpecies);
@@ -15,9 +15,9 @@ const PageHome = () => {
 	return (
 		<div>
 			<h1>Welcome to Tree Of Life Project</h1>
-			<ComListSpecies species={species}></ComListSpecies>
+			<ListSpecies species={species}></ListSpecies>
 		</div>
 	);
 };
 
-export default PageHome;
+export default Home;

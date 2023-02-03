@@ -10,8 +10,8 @@ const listRender = (list) => {
 	);
 };
 
-const ComListSpecies = ({ species }) => {
+const ListSpecies = ({ species }) => {
 	return <div>{listRender(species)}</div>;
 };
 
-export default ComListSpecies;
+export default ListSpecies;
