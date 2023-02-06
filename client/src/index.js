@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import PageHome from "./Pages/page-home";
-import PageTree from "./Pages/page-tree";
+import PageTree from "./Pages/PageTree";
 import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
