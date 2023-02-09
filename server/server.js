@@ -20,7 +20,8 @@ app.use(function (err, req, res, next) {
 	res.status(500).send("Something broke!");
 });
 app.use("/api/species", speciesRouter);
-app.use(function (req, res) {
+
+app.get("/", function (req, res) {
 	res.status(200).send("server is working");
 });
 
