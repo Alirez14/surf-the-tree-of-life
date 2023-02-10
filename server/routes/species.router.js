@@ -18,12 +18,16 @@ speciesRouter.get("/:speciesId", async (req, res) => {
 });
 
 speciesRouter.get("/:speciesId/descendants", async (req, res) => {
+	const queryParams = req.query;
 	const speciesId = req.params.speciesId
 	const species = await SpeciesModel
 		.findOne({importId: speciesId})
 
+	console.log({[queryParams.sortBy]: queryParams.sortOrder === "asc" ? 1 : -1});
+
 	const descendants = await SpeciesModel
-		.find({parent: species._id});
+		.find({parent: species._id})
+		.sort({[queryParams.sortBy]: queryParams.sortOrder === "asc" ? 1 : -1});
 	return res.json(descendants);
 });
 

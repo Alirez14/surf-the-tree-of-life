@@ -13,8 +13,12 @@ const ComSpeciesTree = ({speciesId}) => {
     }, [speciesId]);
 
     useEffect(() => {
+        const queryParams = new URLSearchParams({
+            sortBy: "name",
+            sortOrder: "asc"
+        });
         if (expanded) {
-            const url = `${document.location.protocol}//${document.location.hostname}:8080/api/species/${speciesId}/descendants`;
+            const url = `${document.location.protocol}//${document.location.hostname}:8080/api/species/${speciesId}/descendants?${queryParams}`;
             fetch(url)
                 .then(response => response.json())
                 .then(setDescendants);
