@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ComListSpecies from "../Components/com-list-species";
+import ComListSpecies from "../Components/ComListSpecies";
 
 const fetchSpecies = (dataSetter) => {
 	return fetch("http://localhost:8080/api/species/", {}).then((res) =>
