@@ -1,6 +1,6 @@
 import React from "react";
 
-const ComRenderSpeciesList = ({ species }) => {
+const ComListSpecies = ({ species }) => {
     if (!species) {
         return <p>Loading...</p>;
     }
@@ -11,14 +11,6 @@ const ComRenderSpeciesList = ({ species }) => {
                 <li key={index}>{item.name}</li>
             ))}
         </ul>
-    );
-};
-
-const ComListSpecies = ({ species }) => {
-    return (
-        <div>
-            <ComRenderSpeciesList species={species} />
-        </div>
     );
 };
 
