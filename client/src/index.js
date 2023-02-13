@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import PageHome from "./Pages/page-home";
+import PageHome from "./Pages/PageHome";
 import PageTree from "./Pages/PageTree";
 import reportWebVitals from "./reportWebVitals";
 
