@@ -33,12 +33,17 @@ const ComSpeciesTree = ({speciesId}) => {
         return <li>Loading</li>
     }
 
+    const links = <>
+        <a href={"http://www.tolweb.org/" + species.importId}>Tolweb</a>&nbsp;
+        <a href={`https://en.wikipedia.org/w/index.php?search=${species.name}`}>Wikipedia</a>
+    </>
+
     if (!expanded) {
-        return <li onClick={onExpand}>{species.name}</li>
+        return <li><button onClick={onExpand}>{species.name}</button> {links}</li>
     }
 
     return <li>
-        <span onClick={onExpand}>{species.name}</span>
+        <div><button onClick={onExpand}>{species.name}</button> {links}</div>
         <ul>
             {descendants.map(child => <ComSpeciesTree speciesId={child.importId} key={child.importId} />)}
         </ul>
