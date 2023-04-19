@@ -1,9 +1,10 @@
 import React from "react";
+import ComRowSpecies from "./ComRowSpecies";
 
 const listRender = (list) => {
 	return list ? (
 		list.map((item, index) => {
-			return <li key={index}>{item.name}</li>;
+			return <ComRowSpecies key={index} species={item}></ComRowSpecies>;
 		})
 	) : (
 		<p> loading</p>
