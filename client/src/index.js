@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import PageHome from "./Pages/PageHome";
 import PageTree from "./Pages/PageTree";
+import PageCreateIndividual from "./Pages/PageCreateIndividual";
+import PageIndividuals from "./Pages/PageIndividuals";
+import PageUpdateIndividual from "./Pages/PageUpdateIndividual";
 import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
@@ -15,6 +18,18 @@ const router = createBrowserRouter([
 	{
 		path: "tree",
 		element: <PageTree></PageTree>
+	},
+	{
+		path: "/individuals/create",
+		element: <PageCreateIndividual></PageCreateIndividual>
+	},
+	{
+		path: "/individuals/:id",
+		element: <PageUpdateIndividual></PageUpdateIndividual>
+	}, 
+	{
+		path: "/individuals",
+		element: <PageIndividuals></PageIndividuals>
 	}
 ]);
 
