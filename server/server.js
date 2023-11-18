@@ -19,6 +19,7 @@ app.use(function (err, req, res, next) {
 	console.error(err.stack);
 	res.status(500).send("Something broke!");
 });
+
 app.use("/api/species", speciesRouter);
 app.use(function (req, res) {
 	res.status(200).send("server is working");
@@ -32,8 +33,6 @@ const main = async () => {
 		console.log("Try / route right now");
 	});
 };
-
-
 
 main().catch((err) => {
 	console.error(err);
