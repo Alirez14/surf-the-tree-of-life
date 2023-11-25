@@ -3,6 +3,15 @@ const SpeciesModel = require("../db/species.model");
 
 const speciesRouter = new Router();
 
+//https://stackoverflow.com/questions/24348437/mongoose-select-a-specific-field-with-find
+speciesRouter.get(["/name"], async (req, res) => {
+	const species = await SpeciesModel.find()
+		.select("name")
+		.sort({ name: "asc" })
+		.limit(100);
+	return res.json(species);
+});
+
 speciesRouter.get(["/", "/:searchParam"], async (req, res) => {
 	const filterObject = req.params.searchParam
 		? { name: { $regex: "^" + req.params.searchParam, $options: "i" } }

@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const speciesRouter = require("./routes/species.router");
+const sightingsRouter = require("./routes/sighting.router");
 
 const { MONGO_URL, PORT = 8080 } = process.env;
 
@@ -21,6 +22,7 @@ app.use(function (err, req, res, next) {
 });
 
 app.use("/api/species", speciesRouter);
+app.use("/api/sightings", sightingsRouter);
 app.use(function (req, res) {
 	res.status(200).send("server is working");
 });

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import PageHome from "./Pages/PageHome";
+import PageSightingForm from "./Pages/PageSightingForm";
+import PageSightings from "./Pages/PageSightings";
 import PageTree from "./Pages/PageTree";
 import reportWebVitals from "./reportWebVitals";
 
@@ -14,8 +16,16 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "tree",
-		element: <PageTree></PageTree>
-	}
+		element: <PageTree></PageTree>,
+	},
+	{
+		path: "sighting-form",
+		element: <PageSightingForm></PageSightingForm>,
+	},
+	{
+		path: "sightings",
+		element: <PageSightings></PageSightings>,
+	},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
